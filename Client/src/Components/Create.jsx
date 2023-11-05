@@ -29,7 +29,7 @@ const CreateBook = () => {
                     <label>Description:</label>
                     <textarea name="description" />
                 </div>
-                <button type="button">Създай</button>
+                <button type="button">Create</button>
             </form>
         </div>
     );

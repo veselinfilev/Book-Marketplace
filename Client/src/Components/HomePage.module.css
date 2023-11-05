@@ -1,7 +1,7 @@
 .homePage {
     font-family: Arial, sans-serif;
-    background: url('../../public/HomePage.jpg') no-repeat center center fixed; /* Снимка като фон */
-    background-size: cover; /* Мащабиране на снимката да покрива целия контейнер */
+    background: url('../../public/HomePage.jpg') no-repeat center center fixed;
+    background-size: cover; 
     padding: 0;
     margin: 0;
     display: flex;
@@ -14,7 +14,6 @@
 
 
 .textOverlay {
-    /* Стилове за текстовия слой */
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 5px;
@@ -23,12 +22,10 @@
 }
 
 .textOverlay h1 {
-    /* Стилове за заглавието */
     font-size: 36px;
 }
 
 .textOverlay p {
-    /* Стилове за параграфите */
     font-size: 18px;
     margin-top: 10px;
 }

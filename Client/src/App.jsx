@@ -4,6 +4,7 @@ import HomePage from './Components/HomePage.jsx'
 import Login from './Components/Login.jsx'
 import Register from './Components/Register.jsx'
 import Create from './Components/Create.jsx'
+import Details from './Components/Details.jsx'
 
 function App() {
 
@@ -13,11 +14,13 @@ function App() {
 
       {/* <HomePage/> */}
 
-      <Login/>
+      {/* <Login/> */}
 
       {/* <Register/> */}
 
       {/* <Create/> */}
+
+    <Details/>
 
       <Footer />
     </>

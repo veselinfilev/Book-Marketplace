@@ -1,0 +1,61 @@
+/* Стилове за компонента "Login" */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../../public/HomePage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loginContainer {
+    max-width: 400px;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8); /* Полу-прозрачен фон за формата */
+    position: relative;
+    z-index: 1; /* Поставя "loginContainer" над фоновата снимка */
+}
+
+
+.loginContainer h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
+.inputGroup {
+    margin-bottom: 15px;
+}
+
+.inputGroup label {
+    display: block;
+    font-weight: bold;
+}
+
+.inputGroup input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.loginButton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.loginButton:hover {
+    background-color: #0056b3;
+}

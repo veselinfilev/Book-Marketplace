@@ -1,0 +1,34 @@
+.homePage {
+    font-family: Arial, sans-serif;
+    background: url('../../public/HomePage.jpg') no-repeat center center fixed; /* Снимка като фон */
+    background-size: cover; /* Мащабиране на снимката да покрива целия контейнер */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+
+.textOverlay {
+    /* Стилове за текстовия слой */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+}
+
+.textOverlay h1 {
+    /* Стилове за заглавието */
+    font-size: 36px;
+}
+
+.textOverlay p {
+    /* Стилове за параграфите */
+    font-size: 18px;
+    margin-top: 10px;
+}

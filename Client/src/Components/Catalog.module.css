@@ -1,0 +1,36 @@
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: calc(100% - 40px); /* Изважда размера на хедъра и футъра */
+    max-height: calc(100vh - 180px);
+    
+}
+
+
+  
+  .book {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+  
+  .book img {
+    width: 100px;
+    height: 150px;
+  }
+  
+  .buttons {
+    margin-top: 10px;
+  }
+
+  button {
+    margin-left: 10px;
+  }
+  
+  

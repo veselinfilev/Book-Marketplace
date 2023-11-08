@@ -1,3 +1,5 @@
+import { Routes, Route } from 'react-router-dom'
+
 import Header from './Components/Header.jsx'
 import Footer from './Components/Footer.jsx'
 import HomePage from './Components/HomePage.jsx'
@@ -9,27 +11,24 @@ import Catalog from './Components/Catalog.jsx'
 
 function App() {
 
-  return (
-    <>
+    return (
+        <>
+            <Header />
 
-      <Header />
+            <Routes>
+                <Route path='/' element={<HomePage />} />
+                <Route path='/login' element={<Login />} />
+                <Route path='/register' element={<Register />} />
+                <Route path='/create' element={<Create />} />
+                <Route path='/catalog' element={<Catalog />} />
+                <Route path='/details' element={<Details />} />
 
-      {/* <HomePage/> */}
+            </Routes>
 
-      {/* <Login/> */}
+            <Footer />
 
-      {/* <Register/> */}
-
-      {/* <Create/> */}
-
-      <Catalog/>
-
-    {/* <Details/> */}
-
-      <Footer />
-    
-    </>
-  )
+        </>
+    )
 }
 
 export default App

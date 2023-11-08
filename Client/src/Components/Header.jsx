@@ -1,18 +1,20 @@
+import { Link } from "react-router-dom";
+
 import "../Components/Header.module.css"
 
-const Header = () =>{
-    return(
+const Header = () => {
+    return (
         <header>
-        <nav>
-            <ul>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Register</a></li>
-                <li><a href="#">Logout</a></li>
-                <li><a href="#">Catalog</a></li>
-                <li><a href="#">Create</a></li>
-            </ul>
-        </nav>
-    </header>
+            <nav>
+                <ul>
+                    <li><Link to="/login">Login</Link></li>
+                    <li><Link to="/register">Register</Link></li>
+                    <li><Link to="/logout">Logout</Link></li>
+                    <li><Link to="/catalog">Catalog</Link></li>
+                    <li><Link to="/create">Create</Link></li>
+                </ul>
+            </nav>
+        </header>
     );
 }
 

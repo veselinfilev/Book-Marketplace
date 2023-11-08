@@ -1,0 +1,23 @@
+.errorPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+  }
+  
+  .errorContent {
+    text-align: center;
+  }
+  
+  .errorContent h1 {
+    font-size: 2em;
+    color: #ff0000;
+  }
+  
+  .errorContent p {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px;
+  }
+  

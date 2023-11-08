@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import styles from "./Catalog.module.css"
 
 const books = [
@@ -94,7 +96,7 @@ const books = [
             <p>Price: ${book.price}</p>
             <div className={styles.buttons}>
               <button>Buy</button>
-              <button>Details</button>
+              <Link to={`/details/${book.id}`}><button> Detail</button></Link> 
             </div>
           </div>
         ))}

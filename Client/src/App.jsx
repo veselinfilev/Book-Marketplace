@@ -8,6 +8,7 @@ import Register from './Components/Register.jsx'
 import Create from './Components/Create.jsx'
 import Details from './Components/Details.jsx'
 import Catalog from './Components/Catalog.jsx'
+import ErrorPage from './Components/ErrorPage.jsx'
 
 function App() {
 
@@ -21,7 +22,9 @@ function App() {
                 <Route path='/register' element={<Register />} />
                 <Route path='/create' element={<Create />} />
                 <Route path='/catalog' element={<Catalog />} />
-                <Route path='/details' element={<Details />} />
+                <Route path='/details/:id' element={<Details />} />
+                <Route path='*' element={<ErrorPage />} />
+
 
             </Routes>
 

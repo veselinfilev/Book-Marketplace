@@ -6,7 +6,8 @@
       "genre": "Horror",
       "price": 12.99,
       "description": "The Shining is a psychological horror novel by Stephen King. It follows Jack Torrance, an aspiring writer and recovering alcoholic who accepts a position as the off-season caretaker of the historic Overlook Hotel in the Colorado Rockies. His young son possesses psychic abilities and is able to see things from the past and future, such as the ghosts who inhabit the hotel.",
-      "imageUrl": "https://example.com/the_shining.jpg"
+      "imageUrl": "https://example.com/the_shining.jpg",
+      "buy":[]
     },
     "bdabf5e9-23be-40a1-9f14-9117b6702a9d": {
       "id": "bdabf5e9-23be-40a1-9f14-9117b6702a9d",
@@ -15,7 +16,9 @@
       "genre": "Horror",
       "price": 14.99,
       "description": "IT is a horror novel by Stephen King. The story follows the experiences of seven children as they are terrorized by an evil entity that exploits the fears of its victims to disguise itself while hunting prey. It primarily appears in the form of Pennywise the Dancing Clown.",
-      "imageUrl": "https://example.com/it.jpg"
+      "imageUrl": "https://example.com/it.jpg",
+      "buy":[]
+
     },
     "f859fc06-bd3e-4b86-aee0-64e5ad8b4f54": {
       "id": "f859fc06-bd3e-4b86-aee0-64e5ad8b4f54",
@@ -24,7 +27,9 @@
       "genre": "Horror",
       "price": 9.99,
       "description": "Carrie is a novel by Stephen King. It's the story of a high school girl with telekinetic powers. She is mocked and humiliated by her classmates, and her unstable, religious mother. When a cruel prank at the prom pushes Carrie over the edge, her powers are unleashed with devastating and deadly results.",
-      "imageUrl": "https://example.com/carrie.jpg"
+      "imageUrl": "https://example.com/carrie.jpg",
+      "buy":[]
+
     },
     "0ecdfc78-74c7-4e9b-a546-2a165aa6f1f8": {
       "id": "0ecdfc78-74c7-4e9b-a546-2a165aa6f1f8",
@@ -33,7 +38,9 @@
       "genre": "Horror",
       "price": 11.99,
       "description": "Pet Sematary is a horror novel by Stephen King. It tells the story of Louis Creed, who moves his family to a rural home where they discover a mysterious burial ground hidden deep in the woods near their new home. When tragedy strikes, Louis turns to the burial ground in desperation, setting off a perilous chain reaction.",
-      "imageUrl": "https://example.com/pet_sematary.jpg"
+      "imageUrl": "https://example.com/pet_sematary.jpg",
+      "buy":[]
+
     },
     "65e9f24b-1b5f-4c01-85b5-6eb0eeab8c08": {
       "id": "65e9f24b-1b5f-4c01-85b5-6eb0eeab8c08",
@@ -42,7 +49,9 @@
       "genre": "Thriller",
       "price": 10.99,
       "description": "Misery is a psychological thriller novel by Stephen King. It's the story of a successful novelist who is rescued from a car crash by his self-proclaimed 'number one fan' and subjected to a series of horrific tortures at her isolated home.",
-      "imageUrl": "https://example.com/misery.jpg"
+      "imageUrl": "https://example.com/misery.jpg",
+      "buy":[]
+
     },
     "ca3cc5a7-34f8-42cd-9327-d8f8a0e2a142": {
       "id": "ca3cc5a7-34f8-42cd-9327-d8f8a0e2a142",
@@ -51,7 +60,9 @@
       "genre": "Post-apocalyptic",
       "price": 13.99,
       "description": "The Stand is a post-apocalyptic horror/fantasy novel by Stephen King. After a government-created virus escapes and decimates the population, the survivors form two groups, one led by an elderly woman and the other by a dark man who represents pure evil.",
-      "imageUrl": "https://example.com/the_stand.jpg"
+      "imageUrl": "https://example.com/the_stand.jpg",
+      "buy":[]
+
     }
   }
   

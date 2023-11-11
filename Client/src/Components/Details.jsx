@@ -1,21 +1,49 @@
-import styles from "./Details.module.css"
+import { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import styles from "./Details.module.css";
+import { deleteBook, getOneBook } from "../services/bookService.js";
 
 const Details = () => {
+    const { bookId } = useParams();
+    const [book, setBook] = useState({});
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        getOneBook(bookId)
+            .then(result => setBook(result))
+    }, [bookId])
+
+    const onDelete = (bookId) => {
+        deleteBook(bookId)
+            .then(response => {
+                console.log(response);
+                if (response == 200) {
+                   navigate('/catalog')
+                } else {
+                    throw new Error('Unsuccessful delete');
+                }
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
 
     return (
         <div className={styles.bookDetails}>
             <h1>Book details</h1>
-            <img src="book-image.jpg" alt="Book image" />
-            <h2>Book name</h2>
-            <p>Author: Автор</p>
-            <p>Genre: Жанр</p>
-            <p>Price: $19.99</p>
-            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <button>Buy</button>
-            <button>Delete</button>
-            <button>Edit</button>
+            <img src={book.imageUrl} alt="Book image" />
+            <h2>{book.name}</h2>
+            <p>Author: {book.author}</p>
+            <p>Genre: {book.genre}</p>
+            <p>Price: ${book.price}</p>
+            <p>Description: {book.description}</p>
+            <div className={styles.buttonContainer}>
+                <button>Buy</button>
+                <button onClick={() => onDelete(bookId)}>Delete</button>
+                <button>Edit</button>
+            </div>
         </div>
     );
 }
 
-export default Details
+export default Details;

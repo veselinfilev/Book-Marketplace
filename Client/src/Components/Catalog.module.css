@@ -4,14 +4,12 @@
     gap: 20px;
     padding: 20px;
     margin: 0 auto;
-    max-width: calc(100% - 40px); /* Изважда размера на хедъра и футъра */
+    max-width: calc(100% - 40px);
     max-height: calc(100vh - 180px);
     
 }
 
-
-  
-  .book {
+.book {
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 20px;

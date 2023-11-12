@@ -1,6 +1,25 @@
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+
 import styles from './Register.module.css';
 
 const Register = () => {
+
+    const [formValues, setFormValues] = useState({
+        email:'',
+        username:'',
+        password:'',
+        repass:''
+    })
+
+    const changeHandler = (e) => {
+        setFormValues(state => ({
+            ...state,
+            [e.target.name]:e.target.value
+        }))
+    }
+
+
     return (
 
             <div className={styles.registerContainer}>
@@ -13,7 +32,8 @@ const Register = () => {
                             type="text"
                             id="email"
                             name="email"
-
+                            value={formValues.email}
+                            onChange={changeHandler}
                         />
                     </div>
                     <div className={styles.inputGroup}>
@@ -22,7 +42,8 @@ const Register = () => {
                             type="text"
                             id="username"
                             name="username"
-
+                            value={formValues.username}
+                            onChange={changeHandler}
                         />
                     </div>
                     <div className={styles.inputGroup}>
@@ -31,7 +52,8 @@ const Register = () => {
                             type="password"
                             id="password"
                             name="password"
-
+                            value={formValues.password}
+                            onChange={changeHandler}
                         />
                     </div>
                     <div className={styles.inputGroup}>
@@ -40,11 +62,13 @@ const Register = () => {
                             type="password"
                             id="repass"
                             name="repass"
-
+                            value={formValues.repass}
+                            onChange={changeHandler}
                         />
                     </div>
                     <button type="submit" className={styles.registerButton}>Register</button>
                 </form>
+                <p>If you have registration <Link to="/login">click here</Link> </p>
             </div>
     );
 }

@@ -27,7 +27,7 @@ export const deleteBook = async (bookId) => {
 }
 
 export const buyBook = async (bookId, userId) => {
-
+    
 }
 
 export const createBook = async (data) => {
@@ -72,8 +72,6 @@ export const updateBook = async (data, bookId) => {
             "buy": data.buy
         
     };
-
-    console.log(bookData);
 
     const response = await fetch(`${baseUrl}/${bookId}`, {
         method: 'PUT',

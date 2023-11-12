@@ -35,18 +35,48 @@ export const createBook = async (data) => {
 
     const bookData =
     {
-            "name": data.title,
-            "author": data.author,
-            "genre": data.genre,
-            "price": data.price,
-            "description": data.description,
-            "imageUrl": data.image,
-            buy: []
-        
+        "title": data.title,
+        "author": data.author,
+        "genre": data.genre,
+        "price": data.price,
+        "description": data.description,
+        "image": data.image,
+        "buy": []
+
     };
 
     const response = await fetch(baseUrl, {
         method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(bookData)
+    });
+
+    return response.status
+
+}
+
+export const updateBook = async (data, bookId) => {
+
+    const bookData =
+    {
+       
+            "_id":[bookId],
+            "title": data.title,
+            "author": data.author,
+            "genre": data.genre,
+            "price": data.price,
+            "description": data.description,
+            "image": data.image,
+            "buy": data.buy
+        
+    };
+
+    console.log(bookData);
+
+    const response = await fetch(`${baseUrl}/${bookId}`, {
+        method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
         },

@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import styles from "./Catalog.module.css"
 import { getAllBook } from "../services/bookService.js";
 
-// const books = await getAllBook();
 
 const Catalog = () => {
 
@@ -18,8 +17,8 @@ const Catalog = () => {
     <div className={styles.catalog}>
       {books.map((book) => (
         <div className={styles.book} key={book._id}>
-          <img src={book.imageUrl} alt={book.name} />
-          <h3>{book.name}</h3>
+          <img src={book.image} alt={book.title} />
+          <h3>{book.title}</h3>
           <p>Author: {book.author}</p>
           <p>Price: ${book.price}</p>
           <div className={styles.buttons}>

@@ -29,14 +29,14 @@ const Details = () => {
     }
 
     const onEdit = () => {
-        navigate(`/edit/${bookId}`, { state:book });
+        navigate(`/edit/${bookId}`,{state:book});
     }
 
     return (
         <div className={styles.bookDetails}>
             <h1>Book details</h1>
-            <img src={book.imageUrl} alt="Book image" />
-            <h2>{book.name}</h2>
+            <img src={book.image} alt="Book image" />
+            <h2>{book.title}</h2>
             <p>Author: {book.author}</p>
             <p>Genre: {book.genre}</p>
             <p>Price: ${book.price}</p>

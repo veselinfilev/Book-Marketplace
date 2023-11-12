@@ -1,37 +1,37 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import styles from './Create.module.css';
-import { createBook } from '../services/bookService.js';
+import { createBook, updateBook } from '../services/bookService.js';
 
 
-const EditBook = ({ location }) => {
+const EditBook = () => {
     const navigate = useNavigate();
+    const location = useLocation();
     const book = location.state;
-
+    const bookId = book._id
     const [editBook, setEditBook] = useState({
         title: book.title,
         author: book.author,
         genre: book.genre,
-        image: book.imageUrl,
+        image: book.image,
         price: book.price,
         description: book.description,
     });
 
     const changeHandler = (e) => {
-        setEditBook(state => ({
-            ...state,
+        setEditBook(editBook => ({
+            ...editBook,
             [e.target.name]: e.target.name == 'price' ? Number(e.target.value) : e.target.value
         }))
     }
 
     const onEdit = () => {
-        createBook(editBook)
+        updateBook(editBook, bookId)
             .then(response => {
-                console.log(response);
                 if (response == 200) {
-                    navigate('/catalog')
+                    navigate(`/details/${bookId}`)
                 } else {
-                    throw new Error('Unsuccessful create');
+                    throw new Error('Unsuccessful update');
                 }
             })
             .catch(error => {

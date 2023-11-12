@@ -12,24 +12,47 @@ export const getAllBook = async () => {
 export const getOneBook = async (bookId) => {
     const response = await fetch(`${baseUrl}/${bookId}`);
     const result = await response.json();
-   
+
     return result;
 }
 
-export const deleteBook = async (bookId) =>{
+export const deleteBook = async (bookId) => {
 
-    const response = await fetch(`${baseUrl}/${bookId}`,{
-        method:"DELETE"
+    const response = await fetch(`${baseUrl}/${bookId}`, {
+        method: "DELETE"
     });
 
     return response.status
 
 }
 
-export const buyBook = async (bookId,userId)=>{
+export const buyBook = async (bookId, userId) => {
 
 }
 
-export const create = async (bookId,userId)=>{
+export const createBook = async (data) => {
+
+
+    const bookData =
+    {
+            "name": data.title,
+            "author": data.author,
+            "genre": data.genre,
+            "price": data.price,
+            "description": data.description,
+            "imageUrl": data.image,
+            buy: []
+        
+    };
+
+    const response = await fetch(baseUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(bookData)
+    });
+
+    return response.status
 
 }

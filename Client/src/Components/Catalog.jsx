@@ -17,13 +17,13 @@ const Catalog = () => {
   return (
     <div className={styles.catalog}>
       {books.map((book) => (
-        <div className={styles.book} key={book.id}>
+        <div className={styles.book} key={book._id}>
           <img src={book.imageUrl} alt={book.name} />
           <h3>{book.name}</h3>
           <p>Author: {book.author}</p>
           <p>Price: ${book.price}</p>
           <div className={styles.buttons}>
-            <Link to={`/details/${book.id}`}><button> Detail</button></Link>
+            <Link to={`/details/${book._id}`}><button> Detail</button></Link>
           </div>
         </div>
       ))}

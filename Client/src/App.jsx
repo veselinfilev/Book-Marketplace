@@ -10,6 +10,7 @@ import Create from './Components/Create.jsx'
 import Details from './Components/Details.jsx'
 import Catalog from './Components/Catalog.jsx'
 import ErrorPage from './Components/ErrorPage.jsx'
+import EditBook from './Components/EditBook.jsx'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
                 <Route path='/create' element={<Create />} />
                 <Route path='/catalog' element={<Catalog />} />
                 <Route path='/details/:bookId' element={<Details />} />
+                <Route path='/edit/:bookId' element={<EditBook />} />
                 <Route path='*' element={<ErrorPage />} />
 
 

@@ -28,6 +28,10 @@ const Details = () => {
             });
     }
 
+    const onEdit = () => {
+        navigate(`/edit/${bookId}`, { state:book });
+    }
+
     return (
         <div className={styles.bookDetails}>
             <h1>Book details</h1>
@@ -40,7 +44,7 @@ const Details = () => {
             <div className={styles.buttonContainer}>
                 <button>Buy</button>
                 <button onClick={() => onDelete(bookId)}>Delete</button>
-                <button>Edit</button>
+                <button onClick={onEdit}>Edit</button>
             </div>
         </div>
     );

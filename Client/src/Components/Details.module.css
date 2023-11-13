@@ -28,6 +28,7 @@
   .bookDetails img {
     width: 100px;
     height: 150px;
+    float: none;
   }
   
   .bookDetails button:hover {

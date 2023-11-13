@@ -7,7 +7,7 @@ const Header = () => {
         <header>
             <nav>
                 <ul>
-                    <li><Link to="/"><img src="./images.png" alt="Описание на снимката" /></Link></li>
+                    <li><Link to="/"><img src="./images.png" alt="logo" /></Link></li>
                     <li> <Link to="/">Book store</Link></li>
                     <li><Link to="/login">Login</Link></li>
                     <li><Link to="/register">Register</Link></li>

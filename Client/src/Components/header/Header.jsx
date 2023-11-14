@@ -9,6 +9,7 @@ const Header = () => {
                 <ul>
                     <li><Link to="/"><img src="./images.png" alt="logo" /></Link></li>
                     <li> <Link to="/">Book store</Link></li>
+                    <li><Link to="/profile">Profile</Link></li>
                     <li><Link to="/login">Login</Link></li>
                     <li><Link to="/register">Register</Link></li>
                     <li><Link to="/logout">Logout</Link></li>

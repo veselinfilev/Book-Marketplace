@@ -1,0 +1,68 @@
+.profilePage {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); 
+
+  }
+  
+  .userInfo {
+    border-bottom: 1px solid #000;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  h3.purchase {
+    font-size: 1.5rem;
+    display: block;
+    text-align: center;
+  }
+  
+  .purchasedItems {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    position: relative;
+
+    
+  .item img{
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+        margin-right: 20px;
+  }
+
+
+    .item {
+      display: flex;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+      position: relative;
+      
+  
+     
+  
+      .itemDetails {
+        h4 {
+          margin-bottom: 5px;
+        }
+  
+        p {
+          margin: 0;
+        }
+  
+        button {
+          background-color: #3498db;
+          color: #fff;
+          padding: 5px 10px;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  

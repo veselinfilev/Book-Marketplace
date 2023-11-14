@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Create.module.css';
-import { createBook } from '../services/bookService.js';
+import { createBook } from '../../services/bookService.js';
 
 
 const CreateBook = () => {

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import styles from "./Catalog.module.css"
-import { getAllBook } from "../services/bookService.js";
+import { getAllBook } from "../../services/bookService.js";
 
 
 const Catalog = () => {

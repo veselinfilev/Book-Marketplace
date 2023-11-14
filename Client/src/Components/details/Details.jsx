@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import styles from "./Details.module.css";
-import { deleteBook, getOneBook } from "../services/bookService.js";
+import { deleteBook, getOneBook } from "../../services/bookService.js";
 
 const Details = () => {
     const { bookId } = useParams();

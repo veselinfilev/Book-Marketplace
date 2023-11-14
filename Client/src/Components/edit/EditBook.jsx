@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import styles from './Edit.module.css';
-import { createBook, updateBook } from '../services/bookService.js';
+import { createBook, updateBook } from '../../services/bookService.js';
 
 
 const EditBook = () => {

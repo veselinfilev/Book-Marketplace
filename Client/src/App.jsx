@@ -1,16 +1,16 @@
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
 
-import Header from './Components/Header.jsx'
-import Footer from './Components/Footer.jsx'
-import HomePage from './Components/HomePage.jsx'
-import Login from './Components/Login.jsx'
-import Register from './Components/Register.jsx'
-import Create from './Components/Create.jsx'
-import Details from './Components/Details.jsx'
-import Catalog from './Components/Catalog.jsx'
-import ErrorPage from './Components/ErrorPage.jsx'
-import EditBook from './Components/EditBook.jsx'
+import Header from './Components/header/Header.jsx'
+import Footer from './Components/footer/Footer.jsx'
+import HomePage from './Components/home/HomePage.jsx'
+import Login from './Components/login/Login.jsx'
+import Register from './Components/register/Register.jsx'
+import Create from './Components/create/Create.jsx'
+import Details from './Components/details/Details.jsx'
+import Catalog from './Components/catalog/Catalog.jsx'
+import ErrorPage from './Components/error/ErrorPage.jsx'
+import EditBook from './Components/edit/EditBook.jsx'
 
 function App() {
 

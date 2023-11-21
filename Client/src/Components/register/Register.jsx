@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 
 import styles from './Register.module.css';
+import { AuthContext } from '../../contexts/AuthContext';
 
 const Register = () => {
+
+    const {onRegister} = useContext(AuthContext)
 
     const [formValues, setFormValues] = useState({
         email:'',
@@ -19,13 +22,19 @@ const Register = () => {
         }))
     }
 
+    const submitHandler = (e) => {
+        e.preventDefault();
+        onRegister(formValues.email, formValues.password,formValues.username);
+    };
+
+
 
     return (
 
             <div className={styles.registerContainer}>
                 <h2>Register</h2>
 
-                <form >
+                <form onSubmit={submitHandler}>
                     <div className={styles.inputGroup}>
                         <label htmlFor="email">Email:</label>
                         <input

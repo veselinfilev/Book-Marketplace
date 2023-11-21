@@ -1,6 +1,6 @@
 .homePage {
     font-family: Arial, sans-serif;
-    background: url('../../public/HomePage.jpg') no-repeat center center fixed;
+    background: url('/HomePage.jpg') no-repeat center center fixed;
     background-size: cover; 
     padding: 0;
     margin: 0;

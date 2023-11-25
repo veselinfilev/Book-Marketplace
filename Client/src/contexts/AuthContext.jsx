@@ -12,13 +12,24 @@ export const AuthProvider = ({
     const [auth, setAuth] = useState({});
     const navigate = useNavigate();
 
+
     const onLogin = async (email, password) => {
-        const result = await login(email, password);
+        try {
+            const result = await login(email, password);
 
-        setAuth(result);
-        localStorage.setItem('user', JSON.stringify(result))
+            if (result.code === 403) {
+                throw new Error('Email or password don\'t match')
+            } else {
 
-        navigate('/catalog')
+                setAuth(result);
+                localStorage.setItem('user', JSON.stringify(result))
+
+                navigate('/catalog')
+            }
+        } catch (error) {
+            return error
+        }
+
     }
 
     const onRegister = async (email, password, username) => {

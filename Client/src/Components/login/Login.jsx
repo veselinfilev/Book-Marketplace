@@ -13,6 +13,14 @@ const Login = () => {
         password: ''
     })
 
+    const [error, setError] = useState('')
+
+    const [showPassword, setShowPassword] = useState(false);
+
+    const toggleShowPassword = () => {
+        setShowPassword(!showPassword);
+    };
+
     const changeHandler = (e) => {
         setFormValues(state => ({
             ...state,
@@ -20,9 +28,12 @@ const Login = () => {
         }))
     }
 
-    const submitHandler = (e) => {
+    const submitHandler = async (e) => {
         e.preventDefault();
-        onLogin(formValues.email, formValues.password);
+        const loginError = await onLogin(formValues.email, formValues.password)
+        if (loginError) {
+            setError(loginError.message)
+        }
     };
 
 
@@ -44,13 +55,26 @@ const Login = () => {
                 <div className={styles.inputGroup}>
                     <label htmlFor="password">Password:</label>
                     <input
-                        type="password"
+                        type={showPassword ? 'text' : 'password'}
                         id="password"
                         name="password"
                         value={formValues.password}
                         onChange={changeHandler}
                     />
+                    <button
+                        type="button"
+                        className={`${styles.showPasswordButton}`}
+                        onClick={toggleShowPassword}
+                    />
+
                 </div>
+
+                {error && (
+                    <div className={styles.errorBox}>
+                        <p>{error}</p>
+                    </div>
+                )}
+
                 <button type="submit" className={styles.loginButton}>Login</button>
             </form>
             <p>If you don't have registration <Link to="/register">click here</Link> </p>

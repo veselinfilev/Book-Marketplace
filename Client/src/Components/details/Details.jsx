@@ -20,7 +20,8 @@ const Details = () => {
                 if (response == 200) {
                    navigate('/catalog')
                 } else {
-                    throw new Error('Unsuccessful delete');
+                    navigate('/catalog')
+                    // throw new Error('Unsuccessful delete');
                 }
             })
             .catch(error => {

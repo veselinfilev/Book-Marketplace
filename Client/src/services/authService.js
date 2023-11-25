@@ -43,7 +43,7 @@ export const register = async (email, password, username) => {
 }
 
 export const logout = async () => {
-    const token = localStorage.getItem('accessToken');
+    const token = JSON.parse(localStorage.getItem('user')).accessToken;
 
     const response = await fetch(`${baseUrl}/logout`, {
         method: 'GET',
@@ -53,11 +53,9 @@ export const logout = async () => {
     });
 
     if (response.status === 204) {
-        // Successful logout, return an empty object
         return {};
     }
 
-    // If the status is not 204, handle the error
     const errorMessage = await response.text();
     throw new Error(`Logout failed with status: ${response.status}. ${errorMessage}`);
 };

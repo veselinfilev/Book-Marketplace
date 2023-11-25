@@ -16,7 +16,7 @@ export const AuthProvider = ({
         const result = await login(email, password);
 
         setAuth(result);
-        localStorage.setItem('accessToken', result.accessToken)
+        localStorage.setItem('user', JSON.stringify(result))
 
         navigate('/catalog')
     }
@@ -26,7 +26,7 @@ export const AuthProvider = ({
         //TODO check password and repeat password are equal
 
         setAuth(result);
-        localStorage.setItem('accessToken', result.accessToken)
+        localStorage.setItem('user', JSON.stringify(result))
 
         navigate('catalog')
     }
@@ -34,7 +34,7 @@ export const AuthProvider = ({
     const onLogout = () => {
 
         setAuth({})
-        localStorage.removeItem('accessToken')
+        localStorage.removeItem('user')
     }
 
     const contextValues = {

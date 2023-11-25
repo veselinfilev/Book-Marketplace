@@ -31,7 +31,8 @@ const EditBook = () => {
                 if (response == 200) {
                     navigate(`/details/${bookId}`)
                 } else {
-                    throw new Error('Unsuccessful update');
+                    navigate(`/details/${bookId}`)
+                    // throw new Error('Unsuccessful update');
                 }
             })
             .catch(error => {

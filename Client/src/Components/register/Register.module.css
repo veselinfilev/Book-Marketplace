@@ -3,9 +3,9 @@
     padding: 40px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: rgba(255, 255, 255, 0.8);
     position: relative;
-    z-index: 1; 
+    /* z-index: 1; */
 }
 
 
@@ -18,6 +18,8 @@
 
 .inputGroup {
     margin-bottom: 15px;
+    position: relative;
+
 }
 
 .inputGroup label {
@@ -40,9 +42,54 @@
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    
+
 }
 
 .registerButton:hover {
     background-color: #0056b3;
 }
+
+.errorBox {
+    border: 1px solid #ff4d4f;
+    background-color: #fff1f0;
+    color: #ff4d4f;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.errorBox p {
+    margin: 0;
+}
+
+.showPasswordButton {
+    position: absolute;
+    right: 1px;
+    top: 5%;
+    transform: translateY(20%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .showPasswordButton::before {
+    content: '\1F441';
+    font-size: 1.2em;
+    color: #333;
+  }
+
+  .showRepassButton {
+    position: absolute;
+    right: 1px;
+    top: 5%;
+    transform: translateY(20%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .showRepassButton::before {
+    content: '\1F441';
+    font-size: 1.2em;
+    color: #333;
+  }

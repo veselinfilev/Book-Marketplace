@@ -33,13 +33,23 @@ export const AuthProvider = ({
     }
 
     const onRegister = async (email, password, username) => {
-        const result = await register(email, password, username);
-        //TODO check password and repeat password are equal
+        try {
+            const result = await register(email, password, username);
 
-        setAuth(result);
-        localStorage.setItem('user', JSON.stringify(result))
+            if (result.code === 400) {
+                throw new Error('All fields are required')
+            } else if (result.code === 409) {
+                throw new Error('This email already exists')
+            } else {
 
-        navigate('catalog')
+                setAuth(result);
+                localStorage.setItem('user', JSON.stringify(result))
+
+                navigate('catalog')
+            }
+        } catch (error) {
+            return error
+        }
     }
 
     const onLogout = () => {

@@ -34,3 +34,38 @@
   h3{
     display: contents;
   }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    background-color: #4caf50;
+    color: white;
+    border: 1px solid #4caf50;
+    padding: 10px 20px; /* Фиксирани размери за ширина и височина */
+    margin: 0 4px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 90px;
+    height: 40px;
+  }
+  
+  .pagination button:hover {
+    background-color: #45a049;
+  }
+  
+  .pagination button:disabled {
+    background-color: #ddd;
+    color: #666;
+    border: 1px solid #ddd;
+    cursor: not-allowed;
+  }
+  
+  .pagination span {
+    padding: 10px 20px; /* Фиксирани размери за ширина и височина */
+    margin: 0 4px;
+    color: #666;
+  }

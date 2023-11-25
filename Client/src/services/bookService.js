@@ -9,6 +9,15 @@ export const getAllBook = async () => {
     return data;
 }
 
+export const getCurrentPageBooks = async (offset, pageSize) => {
+
+    const response = await fetch(`${baseUrl}?offset=${offset}&pageSize=${pageSize}`);
+    const result = await response.json();
+    const data = Object.values(result);
+
+    return data;
+}
+
 export const getOneBook = async (bookId) => {
     const response = await fetch(`${baseUrl}/${bookId}`);
     const result = await response.json();

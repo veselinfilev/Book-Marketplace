@@ -1,12 +1,11 @@
 import styles from "./Profile.module.css"
 import { Link } from "react-router-dom";
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from "../../contexts/AuthContext";
 
 const ProfilePage = () => {
-  const userData = {
-    username: 'john_doe',
-    email: 'john@example.com',
-  };
+
+  const { username, userEmail} = useContext(AuthContext);
 
   const purchasedItems = [
     {
@@ -29,11 +28,11 @@ const ProfilePage = () => {
     <div className={styles.profilePage}>
       <div className={styles.userInfo}>
         <h2>Profile Info</h2>
-        <p>Name: {userData.username}</p>
-        <p>Email: {userData.email}</p>
+        <p>Name: {username}</p>
+        <p>Email: {userEmail}</p>
       </div>
 
-        <h3 className={styles.purchase}>Purchased Items</h3>
+      <h3 className={styles.purchase}>Purchased Items</h3>
       <div className={styles.purchasedItems}>
         {purchasedItems.map((item) => (
           <div key={item.id} className={styles.item}>

@@ -42,3 +42,19 @@ export const currentUserBooks = async (userId) => {
     return result
 
 }
+
+export const hasAlreadyBought = async (userId, bookId) => {
+
+    const encodeQuery = encodeURIComponent(`="${userId}" AND bookId="${bookId}"`);
+
+    const responce = await fetch(`${baseUrl}?where=_ownerId${encodeQuery}`)
+
+    if(responce.status === 404){
+        return
+    }
+
+    const result = await responce.json()
+
+    return result.length;
+
+} 

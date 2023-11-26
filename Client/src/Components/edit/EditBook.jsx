@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import styles from './Edit.module.css';
 import { createBook, updateBook } from '../../services/bookService.js';
+import isValidUrl from '../../utils/urlValidator.js';
 
 
 const EditBook = () => {
@@ -18,6 +19,8 @@ const EditBook = () => {
         description: book.description,
     });
 
+    const [error, setError] = useState('')
+
     const changeHandler = (e) => {
         setEditBook(editBook => ({
             ...editBook,
@@ -26,17 +29,37 @@ const EditBook = () => {
     }
 
     const onEdit = () => {
+
+        if (Object.values(editBook).some(v => !v)) {
+            setError('All fields are required')
+            return
+        }
+
+        if (!isValidUrl(editBook.image)) {
+            setError('Invalid URL address')
+            return
+        }
+
+        if (editBook.price <= 0) {
+            setError('Price must be a positive number')
+            return
+        }
+
+        if (editBook.description.length < 10) {
+            setError('Description must be at least 10 characters long')
+            return
+        }
+
         updateBook(editBook, bookId)
             .then(response => {
                 if (response == 200) {
                     navigate(`/details/${bookId}`)
                 } else {
-                    navigate(`/details/${bookId}`)
-                    // throw new Error('Unsuccessful update');
+                    throw new Error('Unsuccessful update');
                 }
             })
             .catch(error => {
-                console.log(error);
+                setError(error)
             });
     }
 
@@ -69,6 +92,11 @@ const EditBook = () => {
                     <label>Description:</label>
                     <textarea name="description" value={editBook.description} onChange={changeHandler} />
                 </div>
+                {error && (
+                    <div className={styles.errorBox}>
+                        <p>{error}</p>
+                    </div>
+                )}
                 <button type="button" onClick={onEdit}>Save changes</button>
             </form>
         </div>

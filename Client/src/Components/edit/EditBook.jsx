@@ -1,24 +1,20 @@
-import { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useNavigate, useLocation, useParams } from 'react-router-dom';
 import styles from './Edit.module.css';
-import { createBook, updateBook } from '../../services/bookService.js';
+import { getOneBook, updateBook } from '../../services/bookService.js';
 import isValidUrl from '../../utils/urlValidator.js';
 
 
 const EditBook = () => {
     const navigate = useNavigate();
-    const location = useLocation();
-    const book = location.state;
-    const bookId = book._id
-    const [editBook, setEditBook] = useState({
-        title: book.title,
-        author: book.author,
-        genre: book.genre,
-        image: book.image,
-        price: book.price,
-        description: book.description,
-    });
+    const {bookId} = useParams();
+    const [editBook, setEditBook] = useState({});
 
+    useEffect(()=>{
+        getOneBook(bookId)
+        .then(result=>setEditBook(result))
+    },[])
+    
     const [error, setError] = useState('')
 
     const changeHandler = (e) => {

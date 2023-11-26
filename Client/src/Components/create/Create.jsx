@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Create.module.css';
 import { createBook } from '../../services/bookService.js';
+import isValidUrl from '../../utils/urlValidator.js';
 
 
 const CreateBook = () => {
@@ -17,6 +18,8 @@ const CreateBook = () => {
         description: '',
     })
 
+    const [error, setError] = useState('')
+
     const changeHandler = (e) => {
         setFormValues(state => ({
             ...state,
@@ -25,9 +28,29 @@ const CreateBook = () => {
     }
 
     const onCreate = () => {
+
+        if (Object.values(formValues).some(v => !v)) {
+            setError('All fields are required')
+            return
+        }
+
+        if (!isValidUrl(formValues.image)) {
+            setError('Invalid URL address')
+            return
+        }
+
+        if (formValues.price <= 0) {
+            setError('Price must be a positive number')
+            return
+        }
+
+        if (formValues.description.length < 10) {
+            setError('Description must be at least 10 characters long')
+            return
+        }
+
         createBook(formValues)
             .then(response => {
-                console.log(response);
                 if (response == 200) {
                     navigate('/catalog')
                 } else {
@@ -35,7 +58,7 @@ const CreateBook = () => {
                 }
             })
             .catch(error => {
-                console.log(error);
+                setError(error)
             });
     }
 
@@ -68,6 +91,11 @@ const CreateBook = () => {
                     <label>Description:</label>
                     <textarea name="description" value={formValues.description} onChange={changeHandler} />
                 </div>
+                {error && (
+                    <div className={styles.errorBox}>
+                        <p>{error}</p>
+                    </div>
+                )}
                 <button type="button" onClick={onCreate}>Create</button>
             </form>
         </div>

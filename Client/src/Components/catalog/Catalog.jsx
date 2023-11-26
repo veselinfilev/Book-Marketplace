@@ -41,7 +41,7 @@ const Catalog = () => {
         <span>{currentPage}</span>
         <button
           onClick={() => setCurrentPage(prevPage => prevPage + 1)}
-          disabled={books.length < pageSize}
+          disabled={books.length < currentPage * pageSize}
         >
           Next
         </button>

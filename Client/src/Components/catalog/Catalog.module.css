@@ -6,6 +6,7 @@
     margin: 0 auto;
     max-width: calc(100% - 40px);
     max-height: calc(100vh - 180px);
+    margin-bottom: 40px;
     
 }
 
@@ -36,16 +37,21 @@
   }
 
   .pagination {
+    position: fixed;
+    bottom: 90px;
+    left: 50%; 
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    align-items: center;
+    padding: 10px; 
   }
-  
+
   .pagination button {
     background-color: #4caf50;
     color: white;
     border: 1px solid #4caf50;
-    padding: 10px 20px; /* Фиксирани размери за ширина и височина */
+    padding: 10px 20px;
     margin: 0 4px;
     cursor: pointer;
     border-radius: 4px;
@@ -65,7 +71,7 @@
   }
   
   .pagination span {
-    padding: 10px 20px; /* Фиксирани размери за ширина и височина */
+    padding: 10px 20px; 
     margin: 0 4px;
-    color: #666;
+    color: #fff;
   }

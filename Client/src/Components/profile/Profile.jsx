@@ -1,28 +1,19 @@
 import styles from "./Profile.module.css"
 import { Link } from "react-router-dom";
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from "../../contexts/AuthContext";
+import { currentUserBooks } from "../../services/buyService";
 
 const ProfilePage = () => {
 
-  const { username, userEmail} = useContext(AuthContext);
+  const { username, userEmail, userId } = useContext(AuthContext);
 
-  const purchasedItems = [
-    {
-      id: 1,
-      name: 'Book 1',
-      author: 'Author 1',
-      price: 20.00,
-      image: 'https://www.google.bg/imgres?imgurl=https%3A%2F%2Fplatinumlist.net%2Fguide%2Fwp-content%2Fuploads%2F2023%2F03%2F8359_img_worlds_of_adventure-big1613913137.jpg-1024x683.webp&tbnid=Bz3J24JVz5OCIM&vet=12ahUKEwjjq_W4rsSCAxUcgP0HHcMxCiQQMygIegQIARBc..i&imgrefurl=https%3A%2F%2Fplatinumlist.net%2Fguide%2Feverything-you-need-to-know-about-img-worlds-of-adventure&docid=A0w5ojTkCPUH_M&w=1024&h=683&q=img&ved=2ahUKEwjjq_W4rsSCAxUcgP0HHcMxCiQQMygIegQIARBc',
-    },
-    {
-      id: 2,
-      name: 'Book 2',
-      author: 'Author 2',
-      price: 15.00,
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUbDCxqM2Qtr3mmn7H_O3ojGOoo0xKwj1nQg&usqp=CAU',
-    },
-  ];
+  const [purchasedItems, setPurchasedItems] = useState([])
+
+  useEffect(() => {
+    currentUserBooks(userId)
+      .then(result => setPurchasedItems(result.map(i => i.book)))
+  }, [])
 
   return (
     <div className={styles.profilePage}>
@@ -31,20 +22,25 @@ const ProfilePage = () => {
         <p>Name: {username}</p>
         <p>Email: {userEmail}</p>
       </div>
-
       <h3 className={styles.purchase}>Purchased Items</h3>
+        {purchasedItems.length===0 && (
+          <p className={styles.noPurchase}>No purchased items yet &#128577;</p>
+        )}
       <div className={styles.purchasedItems}>
-        {purchasedItems.map((item) => (
-          <div key={item.id} className={styles.item}>
-            <img src={item.image} alt={item.name} />
-            <div className={styles.itemDetails}>
-              <h4>{item.name}</h4>
-              <p>Author: {item.author}</p>
-              <p>Price: ${item.price}</p>
-              <Link to={`/details/${item.id}`}><button> Detail</button></Link>
+        {purchasedItems && (
+
+          purchasedItems.map((item) => (
+            <div key={item._id} className={styles.item}>
+              <img src={item.image} alt={item.name} />
+              <div className={styles.itemDetails}>
+                <h4>{item.name}</h4>
+                <p>Author: {item.author}</p>
+                <p>Price: ${item.price}</p>
+                <Link to={`/details/${item._id}`}><button> Detail</button></Link>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        )}
       </div>
     </div>
   );

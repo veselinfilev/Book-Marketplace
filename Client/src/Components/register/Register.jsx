@@ -72,6 +72,7 @@ const Register = () => {
                 <div className={styles.inputGroup}>
                     <label htmlFor="email">Email:</label>
                     <input
+                        placeholder='Enter your email'
                         type="text"
                         id="email"
                         name="email"
@@ -82,6 +83,7 @@ const Register = () => {
                 <div className={styles.inputGroup}>
                     <label htmlFor="username">Username:</label>
                     <input
+                        placeholder='Enter your username'
                         type="text"
                         id="username"
                         name="username"
@@ -92,6 +94,7 @@ const Register = () => {
                 <div className={styles.inputGroup}>
                     <label htmlFor="password">Password:</label>
                     <input
+                        placeholder='Enter your password'
                         type={showPassword.password ? 'text' : 'password'}
                         id="password"
                         name="password"
@@ -107,6 +110,7 @@ const Register = () => {
                 <div className={styles.inputGroup}>
                     <label htmlFor="repass">Repeat Password:</label>
                     <input
+                        placeholder='Repeat your password'
                         type={showPassword.repass ? 'text' : 'password'}
                         id="repass"
                         name="repass"

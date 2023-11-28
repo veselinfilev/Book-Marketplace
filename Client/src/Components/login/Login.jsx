@@ -45,6 +45,7 @@ const Login = () => {
                 <div className={styles.inputGroup}>
                     <label htmlFor="email">Email:</label>
                     <input
+                        placeholder='Enter your email'
                         type="text"
                         id="email"
                         name="email"
@@ -55,6 +56,7 @@ const Login = () => {
                 <div className={styles.inputGroup}>
                     <label htmlFor="password">Password:</label>
                     <input
+                        placeholder='Enter your password'
                         type={showPassword ? 'text' : 'password'}
                         id="password"
                         name="password"

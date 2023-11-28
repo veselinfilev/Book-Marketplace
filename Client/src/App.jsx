@@ -15,29 +15,30 @@ import ErrorPage from './Components/error/ErrorPage.jsx'
 import EditBook from './Components/edit/EditBook.jsx'
 import ProfilePage from './Components/profile/Profile.jsx'
 import Logout from './Components/logout/Logout.jsx'
+import AuthGuard from './Components/guards/AuthGuard.jsx'
 
 function App() {
 
     return (
         <AuthProvider>
-                <Header />
+            <Header />
 
-                <Routes>
-                    <Route path='/' element={<HomePage />} />
+            <Routes>
+                <Route path='/' element={<HomePage />} />
+                <Route path='/login' element={<Login />} />
+                <Route path='/register' element={<Register />} />
+                <Route element={<AuthGuard />}>
                     <Route path='/profile' element={<ProfilePage />} />
-                    <Route path='/login' element={<Login />} />
-                    <Route path='/register' element={<Register />} />
                     <Route path='/logout' element={<Logout />} />
                     <Route path='/create' element={<Create />} />
-                    <Route path='/catalog' element={<Catalog />} />
-                    <Route path='/details/:bookId' element={<Details />} />
                     <Route path='/edit/:bookId' element={<EditBook />} />
-                    <Route path='*' element={<ErrorPage />} />
+                </Route>
+                <Route path='/catalog' element={<Catalog />} />
+                <Route path='/details/:bookId' element={<Details />} />
+                <Route path='*' element={<ErrorPage />} />
+            </Routes>
 
-
-                </Routes>
-
-                <Footer />
+            <Footer />
 
         </AuthProvider>
     )

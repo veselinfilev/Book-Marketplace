@@ -9,9 +9,23 @@ export const getAllBook = async () => {
     return data;
 }
 
-export const getCurrentPageBooks = async (offset, pageSize) => {
+export const getCurrentPageBooks = async (offset, pageSize, activeButton) => {
 
-    const response = await fetch(`${baseUrl}?offset=${offset}&pageSize=${pageSize}`);
+    let sortParams = '?';
+
+    switch (activeButton) {
+        case 'latest':
+            sortParams = `?sortBy=_createdOn desc&`
+            break;
+        case 'price-high-to-low':
+            sortParams = `?sortBy=price desc&`
+            break;
+        case 'price-low-to-high':
+            sortParams = `?sortBy=price&`
+            break;
+    }
+
+    const response = await fetch(`${baseUrl}${sortParams}offset=${offset}&pageSize=${pageSize}`);
     const result = await response.json();
     const data = Object.values(result);
 
@@ -26,13 +40,13 @@ export const getOneBook = async (bookId) => {
 }
 
 export const deleteBook = async (bookId) => {
-const token = JSON.parse(localStorage.getItem('user')).accessToken;
+    const token = JSON.parse(localStorage.getItem('user')).accessToken;
 
-console.log(token);
+    console.log(token);
     const response = await fetch(`${baseUrl}/${bookId}`, {
         method: "DELETE",
         headers: {
-            'X-Authorization':token
+            'X-Authorization': token
         },
     });
 
@@ -41,11 +55,11 @@ console.log(token);
 }
 
 export const buyBook = async (bookId, userId) => {
-    
+
 }
 
 export const createBook = async (data) => {
-const token = JSON.parse(localStorage.getItem('user')).accessToken;
+    const token = JSON.parse(localStorage.getItem('user')).accessToken;
 
     const bookData =
     {
@@ -55,15 +69,13 @@ const token = JSON.parse(localStorage.getItem('user')).accessToken;
         "price": data.price,
         "description": data.description,
         "image": data.image,
-        "buy": []
-
     };
 
     const response = await fetch(baseUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'X-Authorization':token
+            'X-Authorization': token
         },
         body: JSON.stringify(bookData)
     });
@@ -73,28 +85,28 @@ const token = JSON.parse(localStorage.getItem('user')).accessToken;
 }
 
 export const updateBook = async (data, bookId) => {
-const token = JSON.parse(localStorage.getItem('user')).accessToken;
+    const token = JSON.parse(localStorage.getItem('user')).accessToken;
 
 
     const bookData =
     {
-       
-            "_id":[bookId],
-            "title": data.title,
-            "author": data.author,
-            "genre": data.genre,
-            "price": data.price,
-            "description": data.description,
-            "image": data.image,
-            "buy": data.buy
-        
+
+        "_id": [bookId],
+        "title": data.title,
+        "author": data.author,
+        "genre": data.genre,
+        "price": data.price,
+        "description": data.description,
+        "image": data.image,
+        "buy": data.buy
+
     };
 
     const response = await fetch(`${baseUrl}/${bookId}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
-            'X-Authorization':token
+            'X-Authorization': token
         },
         body: JSON.stringify(bookData)
     });

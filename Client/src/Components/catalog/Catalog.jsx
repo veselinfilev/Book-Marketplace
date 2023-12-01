@@ -8,16 +8,41 @@ const Catalog = () => {
 
   const [books, setBooks] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [activeButton, setActiveButton] = useState(null);
   const pageSize = 6;
 
   useEffect(() => {
     const offset = (currentPage - 1) * pageSize;
-    getCurrentPageBooks(offset, pageSize)
+    getCurrentPageBooks(offset, pageSize, activeButton)
       .then(response => setBooks(response));
-  }, [currentPage]);
+  }, [currentPage, activeButton]);
+
+  const handleClick = (buttonType) => {
+    setActiveButton(buttonType);
+  };
 
   return (
     <>
+      <div className={styles.sortBtn}>
+        <button
+          className={activeButton === 'latest' ? 'active' : ''}
+          onClick={() => handleClick('latest')}
+        >
+          Latest
+        </button>
+        <button
+          className={activeButton === 'price-high-to-low' ? 'active' : ''}
+          onClick={() => handleClick('price-high-to-low')}
+        >
+          Price High to Low
+        </button>
+        <button
+          className={activeButton === 'price-low-to-high' ? 'active' : ''}
+          onClick={() => handleClick('price-low-to-high')}
+        >
+          Price Low to High
+        </button>
+      </div>
       <div className={styles.catalog}>
         {books.map((book) => (
           <div className={styles.book} key={book._id}>

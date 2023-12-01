@@ -9,3 +9,7 @@ body {
     align-items: center;
     height: 100vh;
 }
+
+.active{
+    background-color: #45a049;
+}

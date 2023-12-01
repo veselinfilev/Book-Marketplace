@@ -1348,7 +1348,8 @@
                 "genre": "Horror",
                 "price": 12.99,
                 "description": "The Shining is a psychological horror novel by Stephen King. It follows Jack Torrance, an aspiring writer and recovering alcoholic who accepts a position as the off-season caretaker of the historic Overlook Hotel in the Colorado Rockies. His young son possesses psychic abilities and is able to see things from the past and future, such as the ghosts who inhabit the hotel.",
-                "image": "https://images.penguinrandomhouse.com/cover/9780345806789"
+                "image": "https://images.penguinrandomhouse.com/cover/9780345806789",
+                "_createdOn":1701429687378
             },
             "bdabf5e9-23be-40a1-9f14-9117b6702a9d": {
                 "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
@@ -1357,7 +1358,8 @@
                 "genre": "Horror",
                 "price": 14.99,
                 "description": "IT is a horror novel by Stephen King. The story follows the experiences of seven children as they are terrorized by an evil entity that exploits the fears of its victims to disguise itself while hunting prey. It primarily appears in the form of Pennywise the Dancing Clown.",
-                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO76yH_pg6qSKGXGUzaNXE6sYfT7YrAhe4Cw&usqp=CAU"
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO76yH_pg6qSKGXGUzaNXE6sYfT7YrAhe4Cw&usqp=CAU",
+                "_createdOn":1701428687378
 
             },
             "f859fc06-bd3e-4b86-aee0-64e5ad8b4f54": {
@@ -1367,7 +1369,8 @@
                 "genre": "Horror",
                 "price": 9.99,
                 "description": "Carrie is a novel by Stephen King. It's the story of a high school girl with telekinetic powers. She is mocked and humiliated by her classmates, and her unstable, religious mother. When a cruel prank at the prom pushes Carrie over the edge, her powers are unleashed with devastating and deadly results.",
-                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH9GyEAxnR-Mq_EyDKaY-ZhFgAnPrWGJG9rw&usqp=CAU"
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH9GyEAxnR-Mq_EyDKaY-ZhFgAnPrWGJG9rw&usqp=CAU",
+                "_createdOn":1701427687378
 
             },
             "0ecdfc78-74c7-4e9b-a546-2a165aa6f1f8": {
@@ -1377,7 +1380,8 @@
                 "genre": "Horror",
                 "price": 11.99,
                 "description": "Pet Sematary is a horror novel by Stephen King. It tells the story of Louis Creed, who moves his family to a rural home where they discover a mysterious burial ground hidden deep in the woods near their new home. When tragedy strikes, Louis turns to the burial ground in desperation, setting off a perilous chain reaction.",
-                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6AYiqAlIBdS2VvRSbHVWF9WRx4VAVYKBdqO4a6BCYfSyMrZDurEIaqWHqMo5hY-HuK0A&usqp=CAU"
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6AYiqAlIBdS2VvRSbHVWF9WRx4VAVYKBdqO4a6BCYfSyMrZDurEIaqWHqMo5hY-HuK0A&usqp=CAU",
+                "_createdOn":1701426687378
 
             },
             "65e9f24b-1b5f-4c01-85b5-6eb0eeab8c08": {
@@ -1387,7 +1391,8 @@
                 "genre": "Thriller",
                 "price": 10.99,
                 "description": "Misery is a psychological thriller novel by Stephen King. It's the story of a successful novelist who is rescued from a car crash by his self-proclaimed 'number one fan' and subjected to a series of horrific tortures at her isolated home.",
-                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS16rIfTzBej9uXTsXuR738BDqwvTWwQojx2A&usqp=CAU"
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS16rIfTzBej9uXTsXuR738BDqwvTWwQojx2A&usqp=CAU",
+                "_createdOn":1701425687378
 
             },
             "ca3cc5a7-34f8-42cd-9327-d8f8a0e2a142": {
@@ -1397,7 +1402,8 @@
                 "genre": "Post-apocalyptic",
                 "price": 13.99,
                 "description": "The Stand is a post-apocalyptic horror/fantasy novel by Stephen King. After a government-created virus escapes and decimates the population, the survivors form two groups, one led by an elderly woman and the other by a dark man who represents pure evil.",
-                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbdKe9mXSqLZY34fWGCdyOZxAQAWTZQClaBQ&usqp=CAU"
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbdKe9mXSqLZY34fWGCdyOZxAQAWTZQClaBQ&usqp=CAU",
+                "_createdOn":1701424687378
 
             },
             "ca3cc5a7-34f8-42cd-9327-d8f8a0e2a192": {
@@ -1407,7 +1413,9 @@
                 "genre": "Fantasy",
                 "price": 19.99,
                 "description": "The first book in the Harry Potter series, where Harry discovers his magical abilities and begins his journey at Hogwarts School of Witchcraft and Wizardry.",
-                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgEIkvSiGeTDLK_TiWRvPNRuwk8ysrjq2MTjljqS_MF84f8upbcftkWCVmVY7xbB7PF5s&usqp=CAU"
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgEIkvSiGeTDLK_TiWRvPNRuwk8ysrjq2MTjljqS_MF84f8upbcftkWCVmVY7xbB7PF5s&usqp=CAU",
+                "_createdOn":1701423687378
+
             },
             "a2b7ef14-6b99-4f24-87d8-9e5e0da4e272": {
                 "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
@@ -1416,7 +1424,9 @@
                 "genre": "Fantasy",
                 "price": 22.99,
                 "description": "The second book in the Harry Potter series, where Harry uncovers the mystery of the Chamber of Secrets and faces new challenges at Hogwarts.",
-                "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/regionalbooks/z/x/p/harry-potter-and-the-chamber-of-secrets-english-paperback-original-imagqd2gk94epdgu.jpeg?q=90"
+                "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/regionalbooks/z/x/p/harry-potter-and-the-chamber-of-secrets-english-paperback-original-imagqd2gk94epdgu.jpeg?q=90",
+                "_createdOn":1701422687378
+
             },
             "f8d9a3c1-5a46-48cf-8a85-3f90d6279c62": {
                 "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
@@ -1425,7 +1435,9 @@
                 "genre": "Fantasy",
                 "price": 24.99,
                 "description": "The third book in the Harry Potter series, where Harry learns about his family's past and encounters dangerous creatures and magical mysteries.",
-                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUfnx5rOOm-kiQPVlUybIoVT1tfsmFpwz3Xg&usqp=CAU"
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUfnx5rOOm-kiQPVlUybIoVT1tfsmFpwz3Xg&usqp=CAU",
+                "_createdOn":1701429687378
+
             },
             "d45e61c3-8d54-4f97-93cc-6c817f06b71f": {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
@@ -1434,7 +1446,9 @@
                 "genre": "Fantasy",
                 "price": 27.99,
                 "description": "The fourth book in the Harry Potter series, where Harry competes in the Triwizard Tournament and faces new threats to the wizarding world.",
-                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4dU9882mu-CohfBDUbSbh7mdHEYhUxAeDUUGlTvyS5_IE2r_0K2bM2-ZSYXiVI5pdmNQ&usqp=CAU"
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4dU9882mu-CohfBDUbSbh7mdHEYhUxAeDUUGlTvyS5_IE2r_0K2bM2-ZSYXiVI5pdmNQ&usqp=CAU",
+                "_createdOn":1701420687378
+
               }
 
         },

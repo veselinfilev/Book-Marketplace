@@ -9,7 +9,7 @@ export const getAllBook = async () => {
     return data;
 }
 
-export const getCurrentPageBooks = async (offset, pageSize, activeButton) => {
+export const getCurrentPageBooks = async (offset, pageSize, activeButton, searchValue) => {
 
     let sortParams = '?';
 
@@ -25,7 +25,9 @@ export const getCurrentPageBooks = async (offset, pageSize, activeButton) => {
             break;
     }
 
-    const response = await fetch(`${baseUrl}${sortParams}offset=${offset}&pageSize=${pageSize}`);
+    const searchParams = `title LIKE "${searchValue}" OR author LIKE "${searchValue}" OR genre LIKE  "${searchValue}"`
+
+    const response = await fetch(`${baseUrl}${sortParams}offset=${offset}&pageSize=${pageSize}&where=${searchParams}`);
     const result = await response.json();
     const data = Object.values(result);
 

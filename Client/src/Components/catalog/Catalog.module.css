@@ -1,83 +1,103 @@
 .catalog {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-    margin: 0 auto;
-    max-width: calc(100% - 40px);
-    max-height: calc(100vh - 180px);
-    margin-bottom: 40px;
-    
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: calc(100% - 40px);
+  max-height: calc(100vh - 180px);
+  margin-bottom: 40px;
+
 }
 
 .book {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-    position: relative;
-    width: 300px;
-    height: 160px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  width: 300px;
+  height: 160px;
 }
-  
-  .book img {
-    width: 100px;
-    height: 150px;
-  }
-  
-  .buttons {
-    margin-top: 10px;
-  }
 
-  button {
-    margin-left: 10px;
-  }
+.book img {
+  width: 100px;
+  height: 150px;
+}
 
-  button:hover {
-    background: rgba(47, 177, 77, 0.5); 
-  }
-  
-  h3{
-    display: contents;
-  }
+.buttons {
+  margin-top: 10px;
+}
 
-  .pagination {
-    position: fixed;
-    bottom: 90px;
-    left: 50%; 
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px; 
-  }
+button {
+  margin-left: 10px;
+}
 
-  .pagination button {
-    background-color: #4caf50;
-    color: white;
-    border: 1px solid #4caf50;
-    padding: 10px 20px;
-    margin: 0 4px;
-    cursor: pointer;
-    border-radius: 4px;
-    width: 90px;
-    height: 40px;
-  }
-  
-  .pagination button:hover {
-    background-color: #45a049;
-  }
-  
-  .pagination button:disabled {
-    background-color: #ddd;
-    color: #666;
-    border: 1px solid #ddd;
-    cursor: not-allowed;
-  }
-  
-  .pagination span {
-    padding: 10px 20px; 
-    margin: 0 4px;
-    color: #fff;
-  } 
+button:hover {
+  background: rgba(47, 177, 77, 0.5);
+}
+
+h3 {
+  display: contents;
+}
+
+.pagination {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.pagination button {
+  background-color: #4caf50;
+  color: white;
+  border: 1px solid #4caf50;
+  padding: 10px 20px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 90px;
+  height: 40px;
+}
+
+.pagination button:hover {
+  background-color: #45a049;
+}
+
+.pagination button:disabled {
+  background-color: #ddd;
+  color: #666;
+  border: 1px solid #ddd;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  padding: 10px 20px;
+  margin: 0 4px;
+  color: #fff;
+}
+
+
+.sortBtn {
+  padding: 0 10px;
+}
+
+
+.search {
+  display: flex;
+  float: right;
+  width: 340px;
+  margin-right: 10px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

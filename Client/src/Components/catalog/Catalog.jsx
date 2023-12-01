@@ -9,17 +9,28 @@ const Catalog = () => {
   const [books, setBooks] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [activeButton, setActiveButton] = useState(null);
+  const [searchInput, setSearchInput] = useState('')
+  const [searchValue, setSearchValue] = useState('')
   const pageSize = 6;
 
   useEffect(() => {
     const offset = (currentPage - 1) * pageSize;
-    getCurrentPageBooks(offset, pageSize, activeButton)
+    getCurrentPageBooks(offset, pageSize, activeButton, searchValue)
       .then(response => setBooks(response));
-  }, [currentPage, activeButton]);
+  }, [currentPage, activeButton, searchValue]);
 
   const handleClick = (buttonType) => {
     setActiveButton(buttonType);
   };
+
+  const handleChange = (e) => {
+    setSearchInput(e.target.value)
+  }
+
+  const searchHandler = (e) => {
+    e.preventDefault();
+    setSearchValue(searchInput);
+  }
 
   return (
     <>
@@ -42,6 +53,15 @@ const Catalog = () => {
         >
           Price Low to High
         </button>
+        <form className={styles.search} onSubmit={searchHandler}>
+          <input
+            type="text"
+            placeholder="Search..."
+            value={searchInput}
+            onChange={handleChange}
+          />
+          <button type="submit">Search</button>
+        </form>
       </div>
       <div className={styles.catalog}>
         {books.map((book) => (

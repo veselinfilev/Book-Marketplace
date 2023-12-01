@@ -32,7 +32,7 @@
   }
   
   .bookDetails button:hover {
-    background: rgba(255, 255, 255, 0.5); 
+    background: rgba(47, 177, 77, 0.5); 
   }
   
   .bookDetails button {
@@ -45,5 +45,5 @@
   }
 
   .sb {
-    color: darkcyan;
+    color: rgba(47, 177, 77, 0.671); 
   }

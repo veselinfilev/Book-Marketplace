@@ -49,6 +49,10 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background: rgba(47, 177, 77, 0.5); 
+}
+
 .errorBox {
   border: 1px solid #ff4d4f;
   background-color: #fff1f0;

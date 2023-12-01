@@ -17,6 +17,8 @@
     border-radius: 5px;
     text-align: center;
     position: relative;
+    width: 300px;
+    height: 160px;
 }
   
   .book img {
@@ -30,6 +32,10 @@
 
   button {
     margin-left: 10px;
+  }
+
+  button:hover {
+    background: rgba(47, 177, 77, 0.5); 
   }
   
   h3{

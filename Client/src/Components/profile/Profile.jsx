@@ -24,7 +24,7 @@ const ProfilePage = () => {
       </div>
       <h3 className={styles.purchase}>Purchased Items</h3>
         {purchasedItems.length===0 && (
-          <p className={styles.noPurchase}>No purchased items yet &#128577;</p>
+          <p className={styles.noPurchase}>No purchased books yet &#128577;</p>
         )}
       <div className={styles.purchasedItems}>
         {purchasedItems && (

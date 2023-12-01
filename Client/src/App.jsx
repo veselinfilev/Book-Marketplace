@@ -16,6 +16,7 @@ import EditBook from './Components/edit/EditBook.jsx'
 import ProfilePage from './Components/profile/Profile.jsx'
 import Logout from './Components/logout/Logout.jsx'
 import AuthGuard from './Components/guards/AuthGuard.jsx'
+import GuestGuard from './Components/guards/GuestGuard.jsx'
 
 function App() {
 
@@ -25,8 +26,10 @@ function App() {
 
             <Routes>
                 <Route path='/' element={<HomePage />} />
-                <Route path='/login' element={<Login />} />
-                <Route path='/register' element={<Register />} />
+                <Route element={<GuestGuard />}>
+                    <Route path='/login' element={<Login />} />
+                    <Route path='/register' element={<Register />} />
+                </Route>
                 <Route element={<AuthGuard />}>
                     <Route path='/profile' element={<ProfilePage />} />
                     <Route path='/logout' element={<Logout />} />

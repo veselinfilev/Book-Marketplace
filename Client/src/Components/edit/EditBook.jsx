@@ -8,7 +8,14 @@ import isValidUrl from '../../utils/urlValidator.js';
 const EditBook = () => {
     const navigate = useNavigate();
     const {bookId} = useParams();
-    const [editBook, setEditBook] = useState({});
+    const [editBook, setEditBook] = useState({
+        title: '',
+        author: '',
+        genre: '',
+        image: '',
+        price: '',
+        description: '',
+    });
 
     useEffect(()=>{
         getOneBook(bookId)

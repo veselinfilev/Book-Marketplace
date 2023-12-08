@@ -17,6 +17,7 @@ import ProfilePage from './Components/profile/Profile.jsx'
 import Logout from './Components/logout/Logout.jsx'
 import AuthGuard from './Components/guards/AuthGuard.jsx'
 import GuestGuard from './Components/guards/GuestGuard.jsx'
+import OwnerGuard from './Components/guards/OwnerGuard.jsx'
 
 function App() {
 
@@ -34,7 +35,9 @@ function App() {
                     <Route path='/profile' element={<ProfilePage />} />
                     <Route path='/logout' element={<Logout />} />
                     <Route path='/create' element={<Create />} />
-                    <Route path='/edit/:bookId' element={<EditBook />} />
+                    <Route element={<OwnerGuard />}>
+                        <Route path='/edit/:bookId' element={<EditBook />} />
+                    </Route>
                 </Route>
                 <Route path='/catalog' element={<Catalog />} />
                 <Route path='/details/:bookId' element={<Details />} />

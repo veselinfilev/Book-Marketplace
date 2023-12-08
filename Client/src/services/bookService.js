@@ -44,7 +44,6 @@ export const getOneBook = async (bookId) => {
 export const deleteBook = async (bookId) => {
     const token = JSON.parse(localStorage.getItem('user')).accessToken;
 
-    console.log(token);
     const response = await fetch(`${baseUrl}/${bookId}`, {
         method: "DELETE",
         headers: {
